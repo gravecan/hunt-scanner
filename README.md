@@ -1,4 +1,4 @@
-# this readme was made by claude opus 5 to prevent fucking graves time to organize , if the strings n shit is broken dm grave on discord , reason is timeouting me rather than paying the ransom $100 <img width="1722" height="126" alt="image" src="https://github.com/user-attachments/assets/df88f622-896d-4123-9e14-d13a306f680d" />
+# this readme was made by claude opus 5 to prevent fucking graves time to organize , this client is pasted from old ocean remake and my old scanner whıch i posted half of the strings and shit it checks for in detect ac discord ,if the strings n shit is broken dm grave on discord , reason is timeouting me rather than paying the ransom $100 <img width="1722" height="126" alt="image" src="https://github.com/user-attachments/assets/df88f622-896d-4123-9e14-d13a306f680d" />
 
 # gui
 <img width="1919" height="1068" alt="image" src="https://github.com/user-attachments/assets/74cd2c45-2ca6-4eb8-81c4-9e2973c8b1a0" />
@@ -9,6 +9,9 @@ grave - reversing
 no1qq - files
 
 # Proofs
+there isnt a public client called "mera / nera" and i only have it cuz it was my scanner and i added my own client to it
+<img width="1172" height="801" alt="image" src="https://github.com/user-attachments/assets/5f07863a-13a7-48af-8217-9d46e6fdfaee" />
+<img width="635" height="565" alt="image" src="https://github.com/user-attachments/assets/b9b5d9dc-5440-4bbc-bf42-ec63bd3f5585" />
 <img width="898" height="715" alt="image" src="https://github.com/user-attachments/assets/8b4cb368-968e-4929-9fe1-d3c7d017e1b5" />
 <img width="705" height="673" alt="image" src="https://github.com/user-attachments/assets/547129e5-131d-4304-b3e0-c2d05cc04291" />
 <img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/f4596270-c8c8-4e8f-8379-143694817e76" />
