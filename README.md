@@ -1,7 +1,20 @@
 # this readme was made by claude opus 5 to prevent fucking graves time to organize , if the strings n shit is broken dm grave on discord , reason is timeouting me rather than paying the ransom $100 <img width="1722" height="126" alt="image" src="https://github.com/user-attachments/assets/df88f622-896d-4123-9e14-d13a306f680d" />
+
+# gui
+<img width="1919" height="1068" alt="image" src="https://github.com/user-attachments/assets/74cd2c45-2ca6-4eb8-81c4-9e2973c8b1a0" />
+<img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/ace1fee3-a046-4acd-ad1a-58c5cb4603f0" />
+
 # credits
 grave - reversing
 no1qq - files
+
+# Proofs
+<img width="898" height="715" alt="image" src="https://github.com/user-attachments/assets/8b4cb368-968e-4929-9fe1-d3c7d017e1b5" />
+<img width="705" height="673" alt="image" src="https://github.com/user-attachments/assets/547129e5-131d-4304-b3e0-c2d05cc04291" />
+<img width="1920" height="1028" alt="image" src="https://github.com/user-attachments/assets/f4596270-c8c8-4e8f-8379-143694817e76" />
+<img width="530" height="558" alt="image" src="https://github.com/user-attachments/assets/c3521328-6a84-4383-b8af-5dbf836614bb" />
+
+
 # 🛡️ Hunt Scanner - Complete Reverse Engineering & Forensic Documentation
 
 This repository contains the full static analysis, extracted embedded artifacts, decrypted network endpoints, memory inspection rules, and categorized client detection signatures for **`Hunt Scanner.exe`** (also known as *Hunt Service* / *Hunt SS Tool*).
