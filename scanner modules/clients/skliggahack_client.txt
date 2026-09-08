@@ -1,0 +1,25 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Skliggahack Client
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Macro Event Listener Search
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: Crystal & Anchor Macro Event Handlers in JVM Heap
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Skliggahack Client Found"
+   - "Generic Skliggahack Client Found"
+
+4. Low-Level Detection Mechanics:
+1. Searches RAM for auto-crystal and auto-anchor macro class fields.
+2. Reads JVM method tables for auto-totem keypress injectors.
+3. Matches 'Skliggahack' brand strings in Java memory heaps.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

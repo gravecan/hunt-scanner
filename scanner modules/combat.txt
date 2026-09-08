@@ -1,0 +1,57 @@
+=== COMBAT, AIM & PVP MODULE DETECTIONS ===
+Scanning Method: ReadProcessMemory iteration on java.exe/javaw.exe heap searching for loaded class names, method names, and configuration strings.
+
+- Aimassist module Found
+- Anchor Placer module Found
+- Anchor macro module Found
+- Attack Delay module Found
+- Attack Players module Found
+- Attack invisibles module Found
+- Auto Hit Crystal module Found
+- Auto Inventory Totem module Found
+- Auto Pot Refill module Found
+- Auto Pot module Found
+- Auto WTap module Found
+- Auto crystal module Found
+- Auto loot module Found
+- Auto shield breaker module Found
+- AutoAnchor module Found
+- AutoDoubleHand module Found
+- AutoHitCrystal module Found
+- AutoInventoryTotem module Found
+- Autoarmor module Found
+- Autoclicker module Found
+- Autodoublehand module Found
+- Autoretotem module Found
+- Autototem module Found
+- Axe Delay module Found
+- Click Aimassist module Found
+- ClickAimassist module Found
+- ClickCrystal Found
+- Crystal optimizer module Found
+- CrystalAura module Found
+- Cw Crystal module Found
+- Disable Shields module Found
+- Equip Delay module Found
+- Generic Crystal Optimizer Found
+- Generic Shieldbreaker module Found
+- Generic autoanchor module Found
+- Generic disable shield module Found
+- Legit Totem module Found
+- Macro anchor module Found
+- No Miss Delay module Found
+- NoWeakAttack Client Found
+- Only Crit Axe module Found
+- Only Crit Sword module Found
+- SetShortcutRouting(%s, flags=%04X, owner_id=0x%08X) -> filtered as potential char input
+- Slot selection module Found
+- Speed Delay module Found
+- Sticky Aim module Found
+- Stop on Kill module Found
+- Switch Delay module Found
+- Sword Delay module Found
+- TriggerBot module Found
+- Triggerbot Client Found
+- fast place module Found
+- hit delay module Found
+- throw delay module Found

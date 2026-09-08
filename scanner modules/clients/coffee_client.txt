@@ -1,0 +1,15 @@
+=====================================================
+  CLIENT ANALYSIS: Coffee Client
+=====================================================
+
+1. Description: Ghost cheat mod for Minecraft 1.8.9 / 1.16+.
+
+2. Memory Inspection Target: Constant Pool & Event Bus Listeners
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Coffee Client Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "Coffee Client Found"

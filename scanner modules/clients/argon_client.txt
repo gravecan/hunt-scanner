@@ -1,0 +1,26 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Argon Client
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Event Listener Audit
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: JVM Memory Heap & String Replacement Buffers
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Argon client Found"
+   - "Replace bypass Found (argon client)"
+   - "argon.client.main"
+
+4. Low-Level Detection Mechanics:
+1. Scans JVM heap for loaded 'argon.client' packages.
+2. Checks string replacement table where Argon attempts to spoof its brand name in RAM.
+3. Inspects crystal macro event handlers.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

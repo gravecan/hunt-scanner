@@ -1,0 +1,27 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Nova Client (V1, Class & Replace Bypasses)
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Class Repository Search
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: Class Repository (class NovaClient) & Heap Replacement Tables
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Nova client Found"
+   - "Nova client class Found"
+   - "NovaClient V1 Found"
+   - "Replace bypass Found (nova client)"
+
+4. Low-Level Detection Mechanics:
+1. Searches for class definitions instantiating 'NovaClient' or 'NovaClientV1'.
+2. Scans constant pool references for 'Replace bypass Found (nova client)' string substitution attempts.
+3. Checks registered keybinding listeners attached to LWJGL Keyboard input queue.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

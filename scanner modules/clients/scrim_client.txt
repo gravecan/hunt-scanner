@@ -1,0 +1,26 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Scrim Client & New Scrim Bypasses
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Memory Replacement Table Audit
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: Screenshare Ghost Memory Buffers & String Replacement Tables
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Scrim client Found"
+   - "Replace bypass Found (Scrim client)"
+   - "Replace bypass Found (New Scrim client)"
+
+4. Low-Level Detection Mechanics:
+1. Designed for competitive screenshare bypasses; attempts string substitution in RAM.
+2. Scanner reads RAM buffers looking for incomplete string overwrites ('Replace bypass Found (New Scrim client)').
+3. Checks for hidden keypress listeners hooked to GetAsyncKeyState.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

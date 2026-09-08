@@ -1,0 +1,25 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Wurst Client
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Class Loader Search
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: Class Repository (net/wurstclient/*)
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Wurst client module Found"
+   - "net/wurstclient/features/Feature"
+
+4. Low-Level Detection Mechanics:
+1. Scans JVM class repository for package names matching 'net.wurstclient'.
+2. Reads memory buffers for Wurst feature registry arrays.
+3. Detects Wurst keybind manager strings in memory.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

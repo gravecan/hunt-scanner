@@ -1,0 +1,82 @@
+=== MASTER HACK CLIENT SIGNATURES SUMMARY ===
+
+[Meteor Client]
+Target: JVM Constant Pool / Class Loader (net.meteorclient)
+Trigger: RAM string match: 'Meteor Client Found' or 'Meteor client Found' or 'net/meteorclient'
+
+[Thunderhack Client]
+Target: RAM String Table & Module Class Loader
+Trigger: RAM string match: 'Thunderhack Client Found'
+
+[Argon Client]
+Target: Heap Memory & String Replacement Table
+Trigger: RAM string match: 'Argon client Found' or 'Replace bypass Found (argon client)'
+
+[Krypton Client]
+Target: JVM Class Repository & String Constants
+Trigger: RAM string match: 'Krypton Client Found' or 'Krypton Obfuscator Found' or 'Replace bypass Found (Krypton client)'
+
+[Grim Client]
+Target: Java Memory Heap & Class Metadata
+Trigger: RAM string match: 'Grim client Found' or 'Grim cracked Client Found'
+
+[Prestige Client & Injector]
+Target: Process Module List (DLL load) & JVM Memory Heap
+Trigger: RAM string match: 'Prestige Client Found' or 'Prestige client Found' or 'Prestige injector found (New string)'
+
+[Skliggahack Client]
+Target: JVM Class Pool & Event Listeners
+Trigger: RAM string match: 'Skliggahack Client Found' or 'Generic Skliggahack Client Found'
+
+[Nova Client]
+Target: Loaded Class Names & Constant Strings
+Trigger: RAM string match: 'Nova client Found' or 'Nova client class Found' or 'NovaClient V1 Found' or 'Replace bypass Found (nova client)'
+
+[Scrim Client]
+Target: String Replacement Tables & Memory Heap
+Trigger: RAM string match: 'Scrim client Found' or 'Replace bypass Found (Scrim client)' or 'Replace bypass Found (New Scrim client)'
+
+[Wurst Client]
+Target: JVM Class Loader (net.wurstclient)
+Trigger: RAM string match: 'Wurst client module Found'
+
+[Catlean Client]
+Target: JVM Heap & Class Names
+Trigger: RAM string match: 'Catlean Client Found' or 'Catlean client found'
+
+[Coffee Client]
+Target: Constant Pool & Event Bus Listeners
+Trigger: RAM string match: 'Coffee Client Found'
+
+[Doomsday Client]
+Target: JVM Class Repository
+Trigger: RAM string match: 'Doomsday Found'
+
+[Francium Client]
+Target: Mod Metadata & Class Pool
+Trigger: RAM string match: 'Francium client Found'
+
+[Ghost Bleach Client]
+Target: JVM Memory Heap
+Trigger: RAM string match: 'Ghost Bleach Client Found'
+
+[Lumina Client]
+Target: JVM Heap & Strings
+Trigger: RAM string match: 'Lumina Client Found' or 'Luminaclient Found'
+
+[NovoWare Client]
+Target: JVM Heap Strings & Process Handles
+Trigger: RAM string match: 'NovoWare Client Found'
+
+[Shoreline Client]
+Target: JVM Class Repository & Mod Fabric JSON
+Trigger: RAM string match: 'Shoreline client Found'
+
+[Surge / Wing Client]
+Target: JVM Memory Heap & Class Pool
+Trigger: RAM string match: 'Surge/Wing Client Found' or 'WingClient Found'
+
+[Donut SMP Bypass]
+Target: JVM Class Pool & Network Packet Transformers
+Trigger: RAM string match: 'Donut SMP Bypass module Found'
+

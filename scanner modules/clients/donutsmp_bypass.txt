@@ -1,0 +1,24 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Donut SMP Bypass Module
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> Network Packet Transformer Search
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: JVM Network Packet Handler & Protocol Pipeline
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Donut SMP Bypass module Found"
+
+4. Low-Level Detection Mechanics:
+1. Scans Netty pipeline handlers in RAM for custom packet obfuscators targeted at Donut SMP server plugin.
+2. Detects inventory packet spoofing listeners.
+3. Matches specific Donut SMP bypass module class signatures.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

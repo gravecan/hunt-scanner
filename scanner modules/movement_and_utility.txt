@@ -1,0 +1,15 @@
+=== MOVEMENT, UTILITY & RENDER DETECTIONS ===
+Scanning Method: Pattern matching against JVM thread states, keypress simulation hooks, and client render pipelines.
+
+- Auto Jump Reset module Found
+- Fake Lag module Found
+- Fake cps module Found
+- Height Expansion module Found
+- Horizontal Speed module Found
+- Netherite Finder module Found
+- Ping spoof module Found
+- Vertical Speed module Found
+- WalksyOptimizer Found
+- Width Expansion module Found
+- X-Ray Found
+- blatant mode module Found

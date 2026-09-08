@@ -1,0 +1,18 @@
+=====================================================
+  CLIENT ANALYSIS: Surge / Wing Client
+=====================================================
+
+1. Description: WingClient / Surge Client ghost mod suite.
+
+2. Memory Inspection Target: JVM Memory Heap & Class Pool
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Surge/Wing Client Found' or 'WingClient Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "##NavUpdateWindowing"
+   - "##NavWindowingOverlay"
+   - "Surge/Wing Client Found"
+   - "WingClient Found"

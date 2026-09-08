@@ -1,0 +1,38 @@
+=== DETECTED HACK CLIENTS & MODIFICATION SUITES ===
+Scanning Method: Deep memory string scanning targeting package names (e.g. net.meteorclient), brand identifiers, and loaded mod metadata.
+
+- Argon client Found
+- Asteria Client Found
+- Catlean Client Found
+- Catlean client found
+- Coffee Client Found
+- Doomsday Found
+- Elitra cheat Found
+- Francium client Found
+- Gardenia client Found
+- Generic Skliggahack Client Found
+- Ghost Bleach Client Found
+- Grandline Client Found
+- Grim client Found
+- Krypton Client Found
+- Lattia Client Found
+- Lumina Client Found
+- Meteor Client Found
+- Meteor client Found
+- Minced client Found
+- New Virgin Client Found
+- Old Virgin Client Found
+- Prestige Client Found
+- Prestige client Found
+- Scrim client Found
+- Shoreline client Found
+- Skliggahack Client Found
+- St-Api Client Found
+- Surge/Wing Client Found
+- Syracruse Client module Found
+- Thunderhack Client Found
+- TipTap Client Found
+- Wazo Client skid Found
+- WingClient Found
+- Wurst client module Found
+- Xyla Client Found

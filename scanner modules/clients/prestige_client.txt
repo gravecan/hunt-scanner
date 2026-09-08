@@ -1,0 +1,27 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Prestige Client & Injector
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> EnumProcessModules / ReadProcessMemory -> Heap Pattern Search
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_EXECUTE_READWRITE (Injected Native Code)
+   - JVM Structural Location: Win32 DLL Load Table & JVM Native Method Bridge (JNI)
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Prestige injector found (New string)"
+   - "Prestige Client Found"
+   - "Prestige client Found"
+   - "prestige_native.dll"
+
+4. Low-Level Detection Mechanics:
+1. Checks process PEB (Process Environment Block) and LDR_DATA_TABLE_ENTRY for unlinked DLL handles.
+2. Scans PAGE_EXECUTE_READWRITE memory blocks for native C++ injection stubs.
+3. Searches JVM heap for Prestige license token strings and injected native method addresses.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

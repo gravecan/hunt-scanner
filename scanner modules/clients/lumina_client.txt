@@ -1,0 +1,16 @@
+=====================================================
+  CLIENT ANALYSIS: Lumina Client
+=====================================================
+
+1. Description: Crystal PvP and macro client.
+
+2. Memory Inspection Target: JVM Heap & Strings
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Lumina Client Found' or 'Luminaclient Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "Lumina Client Found"
+   - "Luminaclient Found"

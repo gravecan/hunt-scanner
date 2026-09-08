@@ -1,0 +1,15 @@
+=====================================================
+  CLIENT ANALYSIS: Ghost Bleach Client
+=====================================================
+
+1. Description: Ghost cheat suite derived from BleachHack.
+
+2. Memory Inspection Target: JVM Memory Heap
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Ghost Bleach Client Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "Ghost Bleach Client Found"

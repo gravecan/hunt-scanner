@@ -1,0 +1,12 @@
+=== ANTI-FORENSICS & TRACE ELIMINATION DETECTIONS ===
+Scanning Method: Checking Windows USN Journal status via DeviceIoControl/fsutil, searching RAM for zeroing/sanitizer loops, and auditing screenshot hooks.
+
+- Anti SS Tool Found
+- Delete USN Journal module Found
+- Generic Selfdestruct Found
+- Generic hwid auth Found
+- Illegal Modfications Found
+- Illegal Modifications Found
+- Possible Destruct Found
+- Self destruct Found
+- String Cleaner Found

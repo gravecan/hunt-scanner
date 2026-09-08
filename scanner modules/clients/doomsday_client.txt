@@ -1,0 +1,15 @@
+=====================================================
+  CLIENT ANALYSIS: Doomsday Client
+=====================================================
+
+1. Description: Anarchy PvP hack client suite.
+
+2. Memory Inspection Target: JVM Class Repository
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Doomsday Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "Doomsday Found"

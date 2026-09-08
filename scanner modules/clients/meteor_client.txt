@@ -1,0 +1,27 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Meteor Client
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> OpenProcess(java.exe) -> VirtualQueryEx -> ReadProcessMemory -> Sliding Window String Matcher
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE (Java Heap Region)
+   - JVM Structural Location: Java Constant Pool (CONSTANT_Utf8_info) & Fabric Mod Class Loader (net/meteorclient/*)
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "net/meteorclient/systems/modules"
+   - "Meteor Client Found"
+   - "Meteor client Found"
+   - "net.meteorclient.mixin"
+
+4. Low-Level Detection Mechanics:
+1. Scans java.exe heap memory for loaded class definitions belonging to 'net.meteorclient'.
+2. Inspects string constant pools for Fabric mod metadata ('meteor-client.mod.json').
+3. Checks registered event listeners attached to Minecraft's main render loop.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

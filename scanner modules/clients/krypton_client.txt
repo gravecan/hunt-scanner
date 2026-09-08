@@ -1,0 +1,27 @@
+===============================================================================
+  DEEP FORENSIC ANALYSIS: Krypton Client & Obfuscator
+===============================================================================
+
+1. Win32 Assembly Execution Flow:
+   ScanThread -> ReadProcessMemory -> String Replacement Table Auditor
+
+2. Target Process & Memory Structure:
+   - Target Process: java.exe / javaw.exe
+   - Target Memory Region: MEM_COMMIT | PAGE_READWRITE
+   - JVM Structural Location: Krypton Obfuscated Class Constant Pool & String Replacement Buffers
+
+3. Exact RAM Byte Patterns & String Triggers:
+   - "Krypton Client Found"
+   - "Krypton Obfuscator Found"
+   - "Replace bypass Found (Krypton client)"
+   - "com/krypton/client"
+
+4. Low-Level Detection Mechanics:
+1. Identifies class files obfuscated with the Krypton byte transformer.
+2. Audits memory string tables for replacement bypasses (where Krypton replaces its name with OptiFine/Forge strings in RAM, leaving trailing pointers).
+3. Inspects JNI method bridge handles for obfuscated native methods.
+
+5. Trigger Logic:
+   When ScanThread iterates over process RAM using ReadProcessMemory, if any chunk
+   contains an exact substring match for these signatures, Hunt Scanner flags the
+   process, increments the RED/YELLOW warning counter, and logs it to detection-results.html.

@@ -1,0 +1,15 @@
+=====================================================
+  CLIENT ANALYSIS: Shoreline Client
+=====================================================
+
+1. Description: Premium Anarchy & Crystal PvP client.
+
+2. Memory Inspection Target: JVM Class Repository & Mod Fabric JSON
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'Shoreline client Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "Shoreline client Found"

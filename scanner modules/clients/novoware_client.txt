@@ -1,0 +1,15 @@
+=====================================================
+  CLIENT ANALYSIS: NovoWare Client
+=====================================================
+
+1. Description: Malware-linked or blatant cheat client mod.
+
+2. Memory Inspection Target: JVM Heap Strings & Process Handles
+   - The scanner uses ReadProcessMemory on java.exe/javaw.exe process memory blocks.
+   - Iterates through committed RAM pages (MEM_COMMIT) searching for plain-text string patterns.
+
+3. Detection Trigger Condition:
+   - RAM string match: 'NovoWare Client Found'
+
+4. Exact Binary Signatures & Strings Found:
+   - "NovoWare Client Found"

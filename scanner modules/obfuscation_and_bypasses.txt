@@ -1,0 +1,15 @@
+=== OBFUSCATION, INJECTION & REPLACEMENT BYPASSES ===
+Scanning Method: Auditing loaded DLL handles, checking JNI native bindings, verifying SpongePowered Mixin class transformers, and checking string replacement tables.
+
+- <img src="data:image/png;base64,
+- Base64 obfuscation Found
+- Client mixin Found (Suspicious)
+- Jnic obfuscator Found
+- Krypton Obfuscator Found
+- Prestige injector found (New string)
+- Replace bypass Found (Krypton client)
+- Replace bypass Found (New Scrim client)
+- Replace bypass Found (Scrim client)
+- Replace bypass Found (argon client)
+- Replace bypass Found (nova client)
+- Replace bypass Found (scrim client)
